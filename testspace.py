@@ -56,7 +56,7 @@ def setchances():
     global chances
 
     chances = input("How many chances would you like per question:  ")
-    while not chances.isdigit() or int(chances) < 1:
+    while not int(chances) < 1:
         chances = input("Please enter a number that is greater than 0:  ")
     chances = int(chances)
     print("")
