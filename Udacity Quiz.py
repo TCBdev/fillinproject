@@ -20,7 +20,7 @@ ultimate_answers = ["four", "byakugan", "kekkei genkai", "chakra", "tenketsu"]
 def easy_bonus():
     score = 0
     time.sleep(1)
-    print("\nCONGRATULATIONS ON MAKING IT TO BONUS LEVEL!")
+    print("\nCONGRATULATIONS ON MAKING IT TO THE BONUS LEVEL!")
     time.sleep(1)
     print("\nThis next section will have three (3) multiple choice questions.")
     time.sleep(1)
@@ -64,6 +64,8 @@ def easy_bonus():
         score = score + 1
         time.sleep(1)
         print("Bonus Score: ", score)
+        print("\nYou have completed the bonus level!\n")
+        print("You're Bonus Score is", score," You're AMAZING!!\n")
         return restart_quiz()
     else:
         print("Incorrect")
@@ -71,18 +73,20 @@ def easy_bonus():
         print(r":'(")
         time.sleep(1)
         print("Bonus Score: ", score)
+        print("\nYou have completed the bonus level!\n")
+        print("You're Bonus Score is", score," Fantastic!!\n")
         return restart_quiz()
 
 def med_bonus():
     score = 0
     time.sleep(1)
-    print("\nCONGRATULATIONS ON MAKING IT TO BONUS LEVEL!")
+    print("\nCONGRATULATIONS ON MAKING IT TO THE BONUS LEVEL!")
     time.sleep(1)
     print("\nThis next section will have three (3) multiple choice questions.")
     time.sleep(1)
     print("\nThe quiz will begin shortly.")
     time.sleep(2)
-    print("\nThe Village Hidden in the Leaf can be found in what country?: \n\n     (A) The Land of Fire\n     (B) The Land of Lightning\n     (C) The Land of Earth\n\n")
+    print("\nThe Village Hidden in the Leaves can be found in what country?: \n\n     (A) The Land of Fire\n     (B) The Land of Lightning\n     (C) The Land of Earth\n\n")
     time.sleep(2)
     answer = input("Your Answer?: ")
     if answer == 'A' or answer == 'a':
@@ -122,6 +126,8 @@ def med_bonus():
         score = score + 1
         time.sleep(1)
         print("Bonus Score: ", score)
+        print("\nYou have completed the bonus level!\n")
+        print("You're Bonus Score is", score," You're AMAZING!!\n")
         return restart_quiz()
     else:
         print("Incorrect")
@@ -129,12 +135,14 @@ def med_bonus():
         print(r":'(")
         time.sleep(1)
         print("Bonus Score: ", score)
+        print("\nYou have completed the bonus level!\n")
+        print("You're Bonus Score is", score," Fantastic!!\n")
         return restart_quiz()
 
 def hard_bonus():
     score = 0
     time.sleep(1)
-    print("\nCONGRATULATIONS ON MAKING IT TO BONUS LEVEL!")
+    print("\nCONGRATULATIONS ON MAKING IT TO THE BONUS LEVEL!")
     time.sleep(1)
     print("\nThis next section will have three (3) multiple choice questions.")
     time.sleep(1)
@@ -178,6 +186,8 @@ def hard_bonus():
         score = score + 1
         time.sleep(1)
         print("Bonus Score: ", score)
+        print("\nYou have completed the bonus level!\n")
+        print("You're Bonus Score is", score," You're AMAZING!!\n")
         return restart_quiz()
     else:
         print("Incorrect")
@@ -185,12 +195,14 @@ def hard_bonus():
         print(r":'(")
         time.sleep(1)
         print("Bonus Score: ", score)
+        print("\nYou have completed the bonus level!\n")
+        print("You're Bonus Score is", score," Fantastic!!\n")
         return restart_quiz()
 
 def ultimate_bonus():
     score = 0
     time.sleep(1)
-    print("\nCONGRATULATIONS ON MAKING IT TO BONUS LEVEL!")
+    print("\nCONGRATULATIONS ON MAKING IT TO THE BONUS LEVEL!")
     time.sleep(1)
     print("\nThis next section will have three (3) multiple choice questions.")
     time.sleep(1)
@@ -234,6 +246,8 @@ def ultimate_bonus():
         score = score + 1
         time.sleep(1)
         print("Bonus Score: ", score)
+        print("\nYou have completed the bonus level!\n")
+        print("You're Bonus Score is", score," You're AMAZING!!\n")
         return restart_quiz()
     else:
         print("Incorrect")
@@ -241,6 +255,8 @@ def ultimate_bonus():
         print(r":'(")
         time.sleep(1)
         print("Bonus Score: ", score)
+        print("\nYou have completed the bonus level!\n")
+        print("You're Bonus Score is", score," Fantastic!!\n")
         return restart_quiz()
 
 def welcome(): # GOOD TO GO #
@@ -252,7 +268,7 @@ def welcome(): # GOOD TO GO #
     print("* " * 10)
     time.sleep(.5)
     print("\n"r"\/\/\/\/\/\/\/\/\/**NARUTO: Still a Genin?! ¯\_(ツ)_/¯ **/\/\/\/\/\/\/\/\/")
-    time.sleep(1)
+    time.sleep(.5)
     player_name = input("\nPlease tell me your name: ")
     time.sleep(1)
     print("\nHello " + player_name)
@@ -263,7 +279,7 @@ def welcome(): # GOOD TO GO #
 
 def level_choice(level): # GOOD TO GO #
     '''Player chooses level. Executed quiz and answers'''
-    if level == "easy" or level == "Easy" or level == "EASY" or level == "ez" or level == "EZ":
+    if level == "easy" or level == "Easy" or level == "EASY" or level == "ez" or level == "EZ" or level == "E" or level == "e":
         return easy_quiz, easy_answers
     elif level == "intermediate" or level == "Intermediate" or level == "INTERMEDIATE" or level == "I" or level == "i" or level == "medium" or level == "Medium" or level == "MEDIUM" or level == "med" or level == "Med" or level == "MED" or level == "M" or level == "m":
         return intermediate_quiz, intermediate_answers
@@ -277,7 +293,7 @@ def advise_guesses():
     global guesses
     try:
         guesses  = int(input("\nHow many guesses would you like (up to 5)?: "))
-        if int(guesses) < 1 or int(guesses) > 5:
+        while int(guesses) < 1 or int(guesses) > 5:
             time.sleep(1)
             guesses = input("Please enter a number that is greater than 0, but less than or equal to 5:  ")
     except:
@@ -286,7 +302,7 @@ def advise_guesses():
         time.sleep(1)
         try:
             guesses  = int(input("\nHow many guesses would you like (up to 5)?: "))
-            if int(guesses) < 1 or int(guesses) > 5:
+            while int(guesses) < 1 or int(guesses) > 5:
                 time.sleep(1)
                 guesses = input("Please enter a number that is greater than 0, but less than or equal to 5:  ")
         except:
@@ -343,7 +359,7 @@ def retrieve_answers(quiz, blanks, replaced, player_answer, index): # GOOD TO GO
         replace_blanks(word, replaced, blanks, player_answer, index)
         
     replaced = " ".join(replaced)
-    head, sep, tail = replaced.partition("Naruto.Wikia")
+    head, sep, tail = replaced.partition("Wikia")
     replaced = head + sep
     return replaced
 
@@ -447,11 +463,13 @@ def restart_quiz(): # GOOD TO GO #
     elif restart in noList:
         print("\n" + "* " * 10)
         time.sleep(.5)
-        print("Thank you for participating in my quiz!" "\n Come back soon!")
+        print("Thank you for participating in my quiz!")
+        time.sleep(.5)
+        print("\nCome back soon!")
         time.sleep(.5)
         print("* " * 10)
         time.sleep(1)
-        print("GAME OVER!")
+        print("\nGAME OVER!")
         time.sleep(2)
         quit()
     else:
