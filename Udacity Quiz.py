@@ -202,7 +202,7 @@ def hard_bonus():
 def ultimate_bonus():
     score = 0
     time.sleep(1)
-    print("\nCONGRATULATIONS ON MAKING IT TO THE BONUS LEVEL!")
+    print("\nCONGRATULATIONS ON MAKING IT TO THE BONUS LEVEL!\n\n  M  E  M  E     E  X  T  R  E  M  E  !")
     time.sleep(1)
     print("\nThis next section will have three (3) multiple choice questions.")
     time.sleep(1)
