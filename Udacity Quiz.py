@@ -259,7 +259,7 @@ def ultimate_bonus():
         print("You're Bonus Score is", score," Fantastic!!\n")
         return restart_quiz()
 
-def welcome(): # GOOD TO GO #
+def welcome(): 
     '''Get players name'''
     print("\n" + "* " * 10)
     time.sleep(.5)
@@ -277,7 +277,7 @@ def welcome(): # GOOD TO GO #
     time.sleep(1)
 
 
-def level_choice(level): # GOOD TO GO #
+def level_choice(level): 
     '''Player chooses level. Executed quiz and answers'''
     if level == "easy" or level == "Easy" or level == "EASY" or level == "ez" or level == "EZ" or level == "E" or level == "e":
         return easy_quiz, easy_answers
@@ -289,7 +289,7 @@ def level_choice(level): # GOOD TO GO #
         return ultimate_quiz, ultimate_answers
 
 def advise_guesses():
-    '''Player can determine how many guesses they would like per play, once guesses are 0, game restarts.'''
+    '''Player can determine how many guesses they would like. Allows to choose between 1 and 5 guesses'''
     global guesses
     try:
         guesses  = int(input("\nHow many guesses would you like (up to 5)?: "))
@@ -316,7 +316,7 @@ def advise_guesses():
     time.sleep(1)
     print("\n    ", guesses, "guess(es) it is!!")
 
-def all_blanks(word, blanks): # GOOD TO GO #
+def all_blanks(word, blanks): 
     '''To single out every blank. Identifies 'blank' in each quiz AND each blank in the 'blanks' list. With correct answer, quiz is returned with 'word'.'''
 
     for blank in blanks:
@@ -324,7 +324,7 @@ def all_blanks(word, blanks): # GOOD TO GO #
             return blank
     return None
 
-def replace_blanks(word, replaced, blanks, player_answer, index): # GOOD TO GO #
+def replace_blanks(word, replaced, blanks, player_answer, index):
     '''To replace each blank with its correct answer.'''
 
     if all_blanks(word, blanks) == None:
@@ -345,7 +345,7 @@ def replace_blanks(word, replaced, blanks, player_answer, index): # GOOD TO GO #
 
     return replaced
 
-def retrieve_answers(quiz, blanks, replaced, player_answer, index): # GOOD TO GO #
+def retrieve_answers(quiz, blanks, replaced, player_answer, index): 
     '''Replaces each ___#___ with its correct answer. Based on player answer, blanks are replaced with correct answers + remaining unanswered blanks.'''
 
     split_quiz = quiz.split()
@@ -363,9 +363,9 @@ def retrieve_answers(quiz, blanks, replaced, player_answer, index): # GOOD TO GO
     replaced = head + sep
     return replaced
 
-def answer_question(level, quiz, answers): # GOOD TO GO #
-    '''To collect the player's answers. Program verifies the selected level, and corresponding level answers to player's answers. Returns the quiz with correct answer replaced (CAPS), the index of each answer.'''
-    
+def answer_question(level, quiz, answers): 
+    '''Program verifies the selected level, and corresponding level answers to player's answers. Number of guesses reduce with every wrong answer. Once guesses reach 0, player will have ability to restart game or end'''
+
     replaced = []
     player_answer = ""
 
@@ -412,7 +412,7 @@ def answer_question(level, quiz, answers): # GOOD TO GO #
     return replaced, index
 
 def bonus_level():
-    '''Player chooses level. Executed quiz and answers'''
+    '''Program checks player original selected level, returns appropriate bonus level/answers'''
     if level == "easy" or level == "Easy" or level == "EASY" or level == "ez" or level == "EZ":
         return easy_bonus()
     elif level == "intermediate" or level == "Intermediate" or level == "INTERMEDIATE" or level == "I" or level == "i" or level == "medium" or level == "Medium" or level == "MEDIUM" or level == "med" or level == "Med" or level == "MED" or level == "M" or level == "m":
@@ -422,10 +422,9 @@ def bonus_level():
     elif level == "ultimate" or level == "Ultimate" or level == "ULTIMATE" or level == "U" or level == "u":
         return ultimate_bonus()
 
-def winner_winner(): # GOOD TO GO #
-    '''Allows player to choose bonus questions, quit the game, or restart the quiz. 
-	   Inputs: None.
-	   Outputs: None'''
+def winner_winner(): 
+    '''Allows player to choose play a bonus level, quit the game, or restart the quiz.'''
+
     print("\nWinner Winner Chicken Dinner" "\nCongratulations you won the game!")
     blevel = input("\nWould you like to play a bonus level?: ")
     if blevel in yesList:  
@@ -454,7 +453,7 @@ def winner_winner(): # GOOD TO GO #
             time.sleep(5)
             quit()
 
-def restart_quiz(): # GOOD TO GO #
+def restart_quiz():
     '''Allow the player to start the game from the beginning. Choose a new level. Outputs: Entire game.'''
     global restart
     restart = input("Would you like to start again?: ")
@@ -528,7 +527,7 @@ def start_game():
             quiz, answers = level_choice(level)
             print(quiz)
             replaced = answer_question(level, quiz, answers)
-        else: # ADD A TIMER TO DELAY THE RESTART #
+        else: 
             time.sleep(1)
             print("\nI'm sorry, I do not understand your choice.")
             time.sleep(1)
