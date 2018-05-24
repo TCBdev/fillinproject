@@ -19,7 +19,7 @@ ultimate_answers = ["four", "byakugan", "kekkei genkai", "chakra", "tenketsu"]
 
 def easy_bonus():
     score = 0
-    time.sleep(1)
+    time.sleep(1) #delay next function by (#) seconds
     print("\nCONGRATULATIONS ON MAKING IT TO THE BONUS LEVEL!")
     time.sleep(1)
     print("\nThis next section will have three (3) multiple choice questions.")
@@ -34,7 +34,7 @@ def easy_bonus():
         print("Bonus Score: ", score)
     else:
         print("Incorrect")
-        time.sleep(.5)
+        time.sleep(1)
         print(r":'(")
         time.sleep(1)
         print("Bonus Score: ", score)
@@ -50,7 +50,7 @@ def easy_bonus():
         print("Bonus Score: ", score)
     else:
         print("Incorrect")
-        time.sleep(.5)
+        time.sleep(1)
         print(r":'(")
         time.sleep(1)
         print("Bonus Score: ", score)
@@ -69,7 +69,7 @@ def easy_bonus():
         return restart_quiz()
     else:
         print("Incorrect")
-        time.sleep(.5)
+        time.sleep(1)
         print(r":'(")
         time.sleep(1)
         print("Bonus Score: ", score)
@@ -96,7 +96,7 @@ def med_bonus():
         print("Bonus Score: ", score)
     else:
         print("Incorrect")
-        time.sleep(.5)
+        time.sleep(1)
         print(r":'(")
         time.sleep(1)
         print("Bonus Score: ", score)
@@ -112,7 +112,7 @@ def med_bonus():
         print("Bonus Score: ", score)
     else:
         print("Incorrect")
-        time.sleep(.5)
+        time.sleep(1)
         print(r":'(")
         time.sleep(1)
         print("Bonus Score: ", score)
@@ -131,7 +131,7 @@ def med_bonus():
         return restart_quiz()
     else:
         print("Incorrect")
-        time.sleep(.5)
+        time.sleep(1)
         print(r":'(")
         time.sleep(1)
         print("Bonus Score: ", score)
@@ -156,7 +156,7 @@ def hard_bonus():
         print("Bonus Score: ", score)
     else:
         print("Incorrect")
-        time.sleep(.5)
+        time.sleep(1)
         print(r":'(")
         time.sleep(1)
         print("Bonus Score: ", score)
@@ -172,7 +172,7 @@ def hard_bonus():
         print("Bonus Score: ", score)
     else:
         print("Incorrect")
-        time.sleep(.5)
+        time.sleep(1)
         print(r":'(")
         time.sleep(1)
         print("Bonus Score: ", score)
@@ -191,7 +191,7 @@ def hard_bonus():
         return restart_quiz()
     else:
         print("Incorrect")
-        time.sleep(.5)
+        time.sleep(1)
         print(r":'(")
         time.sleep(1)
         print("Bonus Score: ", score)
@@ -216,7 +216,7 @@ def ultimate_bonus():
         print("Bonus Score: ", score)
     else:
         print("Incorrect")
-        time.sleep(.5)
+        time.sleep(1)
         print(r":'(")
         time.sleep(1)
         print("Bonus Score: ", score)
@@ -232,7 +232,7 @@ def ultimate_bonus():
         print("Bonus Score: ", score)
     else:
         print("Incorrect")
-        time.sleep(.5)
+        time.sleep(1)
         print(r":'(")
         time.sleep(1)
         print("Bonus Score: ", score)
@@ -251,7 +251,7 @@ def ultimate_bonus():
         return restart_quiz()
     else:
         print("Incorrect")
-        time.sleep(.5)
+        time.sleep(1)
         print(r":'(")
         time.sleep(1)
         print("Bonus Score: ", score)
@@ -262,13 +262,13 @@ def ultimate_bonus():
 def welcome(): 
     '''Get players name'''
     print("\n" + "* " * 10)
-    time.sleep(.5)
+    time.sleep(1)
     print("\nWELCOME TO THE QUIZ TO END ALL QUIZES!\n")
-    time.sleep(.5)
+    time.sleep(1)
     print("* " * 10)
-    time.sleep(.5)
+    time.sleep(1)
     print("\n"r"\/\/\/\/\/\/\/\/\/**NARUTO: Still a Genin?! ¯\_(ツ)_/¯ **/\/\/\/\/\/\/\/\/")
-    time.sleep(.5)
+    time.sleep(1)
     player_name = input("\nPlease tell me your name: ")
     time.sleep(1)
     print("\nHello " + player_name)
@@ -276,9 +276,10 @@ def welcome():
     print("\nLET'S GET STARTED!!")
     time.sleep(1)
 
-
 def level_choice(level): 
-    '''Player chooses level. Executed quiz and answers'''
+    '''Player chooses level. Executed quiz and answers
+    Inputs: Current level.  
+	Outputs: The specific quiz and its answers associated with that level.'''
     if level == "easy" or level == "Easy" or level == "EASY" or level == "ez" or level == "EZ" or level == "E" or level == "e":
         return easy_quiz, easy_answers
     elif level == "intermediate" or level == "Intermediate" or level == "INTERMEDIATE" or level == "I" or level == "i" or level == "medium" or level == "Medium" or level == "MEDIUM" or level == "med" or level == "Med" or level == "MED" or level == "M" or level == "m":
@@ -291,9 +292,13 @@ def level_choice(level):
 def advise_guesses():
     '''Player can determine how many guesses they would like. Allows to choose between 1 and 5 guesses'''
     global guesses
+    global min_guess
+    min_guess = 1
+    global max_guess
+    max_guess = 5
     try:
         guesses  = int(input("\nHow many guesses would you like (up to 5)?: "))
-        while int(guesses) < 1 or int(guesses) > 5:
+        while int(guesses) < min_guess or int(guesses) > max_guess:
             time.sleep(1)
             guesses = input("Please enter a number that is greater than 0, but less than or equal to 5:  ")
     except:
@@ -302,7 +307,7 @@ def advise_guesses():
         time.sleep(1)
         try:
             guesses  = int(input("\nHow many guesses would you like (up to 5)?: "))
-            while int(guesses) < 1 or int(guesses) > 5:
+            while int(guesses) < min_guess or int(guesses) > max_guess:
                 time.sleep(1)
                 guesses = input("Please enter a number that is greater than 0, but less than or equal to 5:  ")
         except:
@@ -317,7 +322,9 @@ def advise_guesses():
     print("\n    ", guesses, "guess(es) it is!!")
 
 def all_blanks(word, blanks): 
-    '''To single out every blank. Identifies 'blank' in each quiz AND each blank in the 'blanks' list. With correct answer, quiz is returned with 'word'.'''
+    '''To single out every blank. Identifies 'blank' in each quiz AND each blank in the 'blanks' list. With correct answer, quiz is returned with 'word'.
+    Inputs: 'word' is the each blank in the 'blanks' list. 'blanks' is the list. 
+	Outputs: Returns 'word' if that matches up with the current word in the quiz.'''
 
     for blank in blanks:
         if blank in word:
@@ -325,7 +332,11 @@ def all_blanks(word, blanks):
     return None
 
 def replace_blanks(word, replaced, blanks, player_answer, index):
-    '''To replace each blank with its correct answer.'''
+    '''To replace each blank with its correct answer.
+    
+    Inputs: 'blanks' list, the replaced quiz that has the correct answers so far, if applicable,
+	the 'player_answer' for that blank, the index number of that 'player_answer' to correctly match that with the right blank to fill in. 
+	Outputs: The correctly replaced quiz.'''
 
     if all_blanks(word, blanks) == None:
         if word not in replaced:
@@ -346,7 +357,8 @@ def replace_blanks(word, replaced, blanks, player_answer, index):
     return replaced
 
 def retrieve_answers(quiz, blanks, replaced, player_answer, index): 
-    '''Replaces each ___#___ with its correct answer. Based on player answer, blanks are replaced with correct answers + remaining unanswered blanks.'''
+    '''Replaces each ___#___ with its correct answer. Based on player answer, blanks are replaced with correct answers + remaining unanswered blanks.
+    Outputs: The correctly replaced quiz'''
 
     split_quiz = quiz.split()
 
@@ -364,7 +376,9 @@ def retrieve_answers(quiz, blanks, replaced, player_answer, index):
     return replaced
 
 def answer_question(level, quiz, answers): 
-    '''Program verifies the selected level, and corresponding level answers to player's answers. Number of guesses reduce with every wrong answer. Once guesses reach 0, player will have ability to restart game or end'''
+    '''Program verifies the selected level, and corresponding level answers to player's answers. Number of guesses reduce with every wrong answer. Once guesses reach 0, player will have ability to restart game or end
+    Inputs: The current level, its quiz, and its answers. 
+	Outputs: The updated replaced quiz, the index of each answer. Guesses.'''
 
     replaced = []
     player_answer = ""
@@ -372,6 +386,7 @@ def answer_question(level, quiz, answers):
     index = 0
     for blank in blanks:
         global guesses
+        minus_one = -1
         question = "\nFor " + blank + " "
         print(question)
         player_answer = input("What is your answer?: ")
@@ -379,8 +394,8 @@ def answer_question(level, quiz, answers):
 
         while player_answer != answers[index]:
             print("\nIncorrect. Please try again.\n")
-            if guesses > 1:
-                guesses += -1
+            if guesses > min_guess:
+                guesses += minus_one
                 time.sleep(1)
                 print(guesses, "guess(es) remaining")
                 time.sleep(1)
@@ -388,15 +403,15 @@ def answer_question(level, quiz, answers):
                 player_answer = player_answer.lower()
             else:
                 print("\n" + "* " * 10)
-                time.sleep(.5)
+                time.sleep(1)
                 print("\nGAME OVER\n")
-                time.sleep(.5)
+                time.sleep(1)
                 print("* " * 10)
                 time.sleep(1)
                 print("\nYOU LOSE\n")
                 time.sleep(1)
                 print("* " * 10)
-                time.sleep(.5)
+                time.sleep(1)
                 print("\n")
                 return restart_quiz()
 
@@ -412,7 +427,9 @@ def answer_question(level, quiz, answers):
     return replaced, index
 
 def bonus_level():
-    '''Program checks player original selected level, returns appropriate bonus level/answers'''
+    '''Program checks player original selected level, returns appropriate bonus level/answers
+    Inputs:  level selected by the user.  
+	Outputs: The specific bonus quiz.'''
     if level == "easy" or level == "Easy" or level == "EASY" or level == "ez" or level == "EZ":
         return easy_bonus()
     elif level == "intermediate" or level == "Intermediate" or level == "INTERMEDIATE" or level == "I" or level == "i" or level == "medium" or level == "Medium" or level == "MEDIUM" or level == "med" or level == "Med" or level == "MED" or level == "M" or level == "m":
@@ -424,7 +441,6 @@ def bonus_level():
 
 def winner_winner(): 
     '''Allows player to choose play a bonus level, quit the game, or restart the quiz.'''
-
     print("\nWinner Winner Chicken Dinner" "\nCongratulations you won the game!")
     blevel = input("\nWould you like to play a bonus level?: ")
     if blevel in yesList:  
@@ -439,19 +455,7 @@ def winner_winner():
         elif blevel in noList:
             return restart_quiz()
         else:
-            print("\n" + "* " * 10)
-            time.sleep(.5)
-            print("\nGAME OVER\n")
-            time.sleep(.5)
-            print("* " * 10)
-            time.sleep(.5)
-            print("\nTHANK YOU FOR STOPPING BY!\n")
-            time.sleep(.5)
-            print("* " * 10)
-            time.sleep(.5)
-            print("\n")
-            time.sleep(5)
-            quit()
+            game_over()
 
 def restart_quiz():
     '''Allow the player to start the game from the beginning. Choose a new level. Outputs: Entire game.'''
@@ -460,47 +464,32 @@ def restart_quiz():
     if restart in yesList:
         start_game()
     elif restart in noList:
-        print("\n" + "* " * 10)
-        time.sleep(.5)
-        print("Thank you for participating in my quiz!")
-        time.sleep(.5)
-        print("\nCome back soon!")
-        time.sleep(.5)
-        print("* " * 10)
-        time.sleep(1)
-        print("\nGAME OVER!")
-        time.sleep(2)
-        quit()
+        return game_over()
     else:
-        print("\n" + "* " * 10)
-        time.sleep(.5)
+        time.sleep(1)
         print("\nI'm sorry, I do not understand your choice.\n")
-        time.sleep(.5)
-        print("* " * 10)
-        time.sleep(.5)
-        print("\nWould you like to start again?\n")
-        time.sleep(.5)
-        print("* " * 10)
-        time.sleep(.5)
-        restart = input("\nYes or No?: ")
-        time.sleep(.5)
+        time.sleep(1)
+        restart = ("\nWould you like to start again?\nYes or No?: ")
+        time.sleep(1)
         if restart in yesList:
             start_game()
         else:
-            print("\n" + "* " * 10)
-            time.sleep(.5)
-            print("\nGAME OVER\n")
-            time.sleep(.5)
-            print("* " * 10)
-            time.sleep(.5)
-            print("\nThank you for participating\n")
-            time.sleep(.5)
-            print("* " * 10)
-            time.sleep(.5)
-            print("")
-            time.sleep(5)
-            quit()
+            game_over()
 
+def game_over():
+    print("\n" + "* " * 10)
+    time.sleep(1)
+    print("\nGAME OVER\n")
+    time.sleep(1)
+    print("* " * 10)
+    time.sleep(1)
+    print("\nTHANK YOU FOR STOPPING BY!\n")
+    time.sleep(1)
+    print("* " * 10)
+    time.sleep(1)
+    print("\n")
+    time.sleep(5)
+    quit()
 
 ##############  Starting to actually play the 'game'  ##############
 
