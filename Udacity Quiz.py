@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*- 
 import time
 
 levelList = ["easy", "Easy", "EASY", "ez", "EZ", "e", "E","intermediate", "Intermediate", "INTERMEDIATE", "I", "i", "medium", "Medium", "MEDIUM", "med", "Med", "MED", "M", "m", "HARD", "hard", "Hard", "h", "H", "ultimate", "Ultimate", "ULTIMATE","u", "U"]
