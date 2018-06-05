@@ -17,7 +17,10 @@ ultimate_answers = ["four", "byakugan", "kekkei genkai", "chakra", "tenketsu"]
 ##############  QUIZ DEFINITIONS  ##############
 
 def easy_bonus():
-
+    '''If player chooses to play a bonus level program checks current level and returns the appropriate corresponding level.
+    Inputs: Current Level
+    Outputs: Bonus questions + Score
+    '''
     print("\nCONGRATULATIONS ON MAKING IT TO THE BONUS LEVEL! \nThis next section will have three (3) multiple choice questions.")
 
     bonus_a1 = input("What is the name of Tsunade's summoning animal?: \n\n     1. Manda\n     2. Katsuyu\n     3. Jiraya\n\n Your Answer: ")
@@ -36,7 +39,10 @@ def easy_bonus():
     return restart_quiz()
 
 def med_bonus():
-
+    '''If player chooses to play a bonus level program checks current level and returns the appropriate corresponding level.
+    Inputs: Current Level
+    Outputs: Bonus questions + Score
+    '''
     print("\nCONGRATULATIONS ON MAKING IT TO THE BONUS LEVEL! \nThis next section will have three (3) multiple choice questions.")
 
     bonus_a4 = input("\nThe Village Hidden in the Leaves can be found in what country?: \n\n     1. The Land of Fire\n     2. The Land of Lightning\n     3. The Land of Earth\n\n    Your Answer: ")
@@ -55,8 +61,11 @@ def med_bonus():
     return restart_quiz()
 
 def hard_bonus():
-   
-    print("\nCONGRATULATIONS ON MAKING IT TO THE BONUS LEVEL! \nThis next section will have three (3) multiple choice questions.")
+    '''If player chooses to play a bonus level program checks current level and returns the appropriate corresponding level.
+    Inputs: Current Level
+    Outputs: Bonus questions + Score
+    '''
+    print("\nCONGRATULATIONS ON MAKING IT TO THE BONUS LEVEL! \nThis next section will have three (3) multiple choice questions.")    
 
     bonus_a7 = input("\nWho was Tsunade's fiancée?: \n\n     1. Dan\n     2. Jiraiya\n     3. Minato\n\n   Your Answer: ")
     bonus_a8 = input("\nNagato is a member of which clan?: \n\n     1. Uzumaki\n     2. Hyuga\n     3. Akatsuki\n\n     Your Answer: ")
@@ -74,7 +83,10 @@ def hard_bonus():
     return restart_quiz()
 
 def ultimate_bonus():
-
+    '''If player chooses to play a bonus level program checks current level and returns the appropriate corresponding level.
+    Inputs: Current Level
+    Outputs: Bonus questions + Score
+    '''
     print("\nCONGRATULATIONS ON MAKING IT TO THE BONUS LEVEL!\n\n  M    E    M    E        E    X    T    R    E    M    E    ! \n\nThis next section will have three (3) multiple choice questions.")
 
     bonus_a10 = input("\nWho was Naruto's first kiss with?: \n\n     1. Sakura\n     2. Hinata \n     3. Sasuke \n\n   Your Answer: ")
