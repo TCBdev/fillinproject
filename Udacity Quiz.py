@@ -14,101 +14,83 @@ intermediate_answers = ["akatsuki", "jinchuriki", "tailed beast", "ten tails", "
 hard_answers = ["clone", "mizuki", "seals", "naruto", "iruka"]
 ultimate_answers = ["four", "byakugan", "kekkei genkai", "chakra", "tenketsu"]
 
-bonus_question = {
-    "q1": "What is the name of Tsunade's summoning animal?: \n\n     1. Manda\n     2. Katsuyu\n     3. Jiraya\n\n Your Answer: ",
-    "q2":"\nWhat's the name of the Cursed Seal given to both Sasuke Uchiha and Anko Mitarashi?: \n\n     1. Heaven Cursed Seal\n     2. Mud Wall Seal\n     3. Reaper's Death Seal\n\n Your Answer: ",
-    "q3":"\nWho was Naruto Uzumaki's father?: \n\n     1. Sasuke Uchiha\n     2. Minato Namikaze \n   3. Orochimaru\n\n   Your Answer: ",
-    "q4": "\nThe Village Hidden in the Leaves can be found in what country?: \n\n     1. The Land of Fire\n     2. The Land of Lightning\n     3. The Land of Earth\n\n    Your Answer: ",
-    "q5": "\nFILL IN THE BLANK.\nGaara is the _____ Kazakagae: \n\n     1. First\n     2. Fifth\n     3. Forth\n\n    Your Answer: ",
-    "q6": "\nHow many tails does the tailed beast (biju) Son Gokū have?: \n\n     1. Three (3)\n     2. Ten (10)\n     3. Four (4)\n\n Your Answer: ",
-    "q7": "\nWho was Tsunade's fiancée?: \n\n     1. Dan\n     2. Jiraiya\n     3. Minato\n\n   Your Answer: ",
-    "q8": "\nNagato is a member of which clan?: \n\n     1. Uzumaki\n     2. Hyuga\n     3. Akatsuki\n\n     Your Answer: ",
-    "q9": "\nWho was Naruto's teacher at the ninja academy?: \n\n     1. Iruka\n     2. Kakashi\n     3. Hiruzen \n\n Your Answer: ",
-    "q10": "\nWho was Naruto's first kiss with?: \n\n     1. Sakura\n     2. Hinata \n     3. Sasuke \n\n   Your Answer: ",
-    "q11": "\nWho is the child of Sasuke and Sakura?: \n\n     1. Hinata\n     2. Sarada\n     3. Salad \n\n   Your Answer: ",
-    "q12": "\nWho is the male parental figure for Himawari?: \n\n     1. Naruto\n     2. Boruto's Dad\n     3. Sasuke \n\n  Your Answer: ",
-}
-
-bonus_a1 = input(bonus_question['q1'])
-bonus_a2 = input(bonus_question['q2'])
-bonus_a3 = input(bonus_question['q3'])
-bonus_a4 = input(bonus_question['q4'])
-bonus_a5 = input(bonus_question['q5'])
-bonus_a6 = input(bonus_question['q6'])
-bonus_a7 = input(bonus_question['q7'])
-bonus_a8 = input(bonus_question['q8'])
-bonus_a9 = input(bonus_question['q8'])
-bonus_a10 = input(bonus_question['q10'])
-bonus_a11 = input(bonus_question['q11'])
-bonus_a12 = input(bonus_question['q12'])
-
-
-
 ##############  QUIZ DEFINITIONS  ##############
 
 def easy_bonus():
 
     print("\nCONGRATULATIONS ON MAKING IT TO THE BONUS LEVEL! \nThis next section will have three (3) multiple choice questions.")
 
-    bonus_questions = [
-        [bonus_question['q1'], bonus_a1, '2'],
-        [bonus_question['q2'], bonus_a2, '1'],
-        [bonus_question['q3'], bonus_a3, '2'],
-    ]
+    bonus_a1 = input("What is the name of Tsunade's summoning animal?: \n\n     1. Manda\n     2. Katsuyu\n     3. Jiraya\n\n Your Answer: ")
+    bonus_a2 = input("\nWhat's the name of the Cursed Seal given to both Sasuke Uchiha and Anko Mitarashi?: \n\n     1. Heaven Cursed Seal\n     2. Mud Wall Seal\n     3. Reaper's Death Seal\n\n Your Answer: ")
+    bonus_a3 = input("\nWho was Naruto Uzumaki's father?: \n\n     1. Sasuke Uchiha\n     2. Minato Namikaze \n   3. Orochimaru\n\n   Your Answer: ")
 
     score = 0
-    for bquestion, banswer, correct_answer in bonus_questions:
-        if banswer == correct_answer:
-            score = score + 1
+    if bonus_a1 == '2':
+        score = score + 1
+    if bonus_a2 == '1':
+        score = score + 1
+    if bonus_a3 == '2':
+        score = score + 1    
 
     print('Your score is: {} out of 3'.format(score))
+    return restart_quiz()
 
 def med_bonus():
 
     print("\nCONGRATULATIONS ON MAKING IT TO THE BONUS LEVEL! \nThis next section will have three (3) multiple choice questions.")
 
-    bonus_questions = [
-        [bonus_question['q4'], bonus_a4, '1'],
-        [bonus_question['q5'], bonus_a5, '2'],
-        [bonus_question['q6'], bonus_a6, '3'],
-    ]
+    bonus_a4 = input("\nThe Village Hidden in the Leaves can be found in what country?: \n\n     1. The Land of Fire\n     2. The Land of Lightning\n     3. The Land of Earth\n\n    Your Answer: ")
+    bonus_a5 = input("\nFILL IN THE BLANK.\nGaara is the _____ Kazakagae: \n\n     1. First\n     2. Fifth\n     3. Forth\n\n    Your Answer: ")
+    bonus_a6 = input("\nHow many tails does the tailed beast (biju) Son Gokū have?: \n\n     1. Three (3)\n     2. Ten (10)\n     3. Four (4)\n\n Your Answer: ")
 
     score = 0
-    for bquestion, banswer, correct_answer in bonus_questions:
-        if banswer == correct_answer:
-            score = score + 1
+    if bonus_a4 == '1':
+        score = score + 1
+    if bonus_a5 == '2':
+        score = score + 1
+    if bonus_a6 == '3':
+        score = score + 1    
 
     print('Your score is: {} out of 3'.format(score))
+    return restart_quiz()
 
 def hard_bonus():
    
     print("\nCONGRATULATIONS ON MAKING IT TO THE BONUS LEVEL! \nThis next section will have three (3) multiple choice questions.")
 
-    bonus_questions = [
-        [bonus_question['q7'], bonus_a7, '1'],
-        [bonus_question['q8'], bonus_a8, '1'],
-        [bonus_question['q9'], bonus_a9, '1'],
-    ]
+    bonus_a7 = input("\nWho was Tsunade's fiancée?: \n\n     1. Dan\n     2. Jiraiya\n     3. Minato\n\n   Your Answer: ")
+    bonus_a8 = input("\nNagato is a member of which clan?: \n\n     1. Uzumaki\n     2. Hyuga\n     3. Akatsuki\n\n     Your Answer: ")
+    bonus_a9 = input("\nWho was Naruto's teacher at the ninja academy?: \n\n     1. Iruka\n     2. Kakashi\n     3. Hiruzen \n\n Your Answer: ")
 
     score = 0
-    for bquestion, banswer, correct_answer in bonus_questions:
-        if banswer == correct_answer:
-            score = score + 1
+    if bonus_a7 == '1':
+        score = score + 1
+    if bonus_a8 == '1':
+        score = score + 1
+    if bonus_a9 == '1':
+        score = score + 1    
+
+    print('Your score is: {} out of 3'.format(score) + 'Great Work!')
+    return restart_quiz()
 
 def ultimate_bonus():
 
-    print("\nCONGRATULATIONS ON MAKING IT TO THE BONUS LEVEL!\n\n  M  E  M  E     E  X  T  R  E  M  E  ! \n\nThis next section will have three (3) multiple choice questions.")
+    print("\nCONGRATULATIONS ON MAKING IT TO THE BONUS LEVEL!\n\n  M    E    M    E        E    X    T    R    E    M    E    ! \n\nThis next section will have three (3) multiple choice questions.")
 
-    bonus_questions = [
-        [bonus_question['q10'], bonus_a10, '3'],
-        [bonus_question['q11'], bonus_a11, '3'],
-        [bonus_question['q12'], bonus_a12, '2'],
-    ]
+    bonus_a10 = input("\nWho was Naruto's first kiss with?: \n\n     1. Sakura\n     2. Hinata \n     3. Sasuke \n\n   Your Answer: ")
+    bonus_a11 = input("\nWho is the child of Sasuke and Sakura?: \n\n     1. Hinata\n     2. Sarada\n     3. Salad \n\n   Your Answer: ")
+    bonus_a12 = input("\nWho is the male parental figure for Himawari?: \n\n     1. Naruto\n     2. Boruto's Dad\n     3. Sasuke \n\n  Your Answer: ")
 
     score = 0
-    for bquestion, banswer, correct_answer in bonus_questions:
-        if banswer == correct_answer:
-            score = score + 1
+    if bonus_a10 == '3':
+        score = score + 1
+    if bonus_a11 == '3':
+        score = score + 1
+    if bonus_a12 == '2':
+        score = score + 1    
+
+    print('Your score is: {} out of 3'.format(score) + 'Great Work!')
+    return restart_quiz()
 
 def welcome(): 
     '''Get players name'''
