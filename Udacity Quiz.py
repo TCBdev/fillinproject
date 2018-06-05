@@ -1,6 +1,4 @@
 # -*- coding: utf-8 -*- 
-import time
-
 levelList = ["easy", "Easy", "EASY", "ez", "EZ", "e", "E","intermediate", "Intermediate", "INTERMEDIATE", "I", "i", "medium", "Medium", "MEDIUM", "med", "Med", "MED", "M", "m", "HARD", "hard", "Hard", "h", "H", "ultimate", "Ultimate", "ULTIMATE","u", "U"]
 yesList = ["yes", "y", "yeah", "yah", "ye", "YES", "Y","YEAH","YAH", "YE", "Yes", "Yeah", "Yah", "Ye"]
 noList = ["no", "n", "nah", "meh", "NO", "N", "NAH", "MEH", "No", "Nah", "Meh"]
@@ -16,278 +14,123 @@ intermediate_answers = ["akatsuki", "jinchuriki", "tailed beast", "ten tails", "
 hard_answers = ["clone", "mizuki", "seals", "naruto", "iruka"]
 ultimate_answers = ["four", "byakugan", "kekkei genkai", "chakra", "tenketsu"]
 
+bonus_question = {
+    "q1": "What is the name of Tsunade's summoning animal?: \n\n     1. Manda\n     2. Katsuyu\n     3. Jiraya\n\n Your Answer: ",
+    "q2":"\nWhat's the name of the Cursed Seal given to both Sasuke Uchiha and Anko Mitarashi?: \n\n     1. Heaven Cursed Seal\n     2. Mud Wall Seal\n     3. Reaper's Death Seal\n\n Your Answer: ",
+    "q3":"\nWho was Naruto Uzumaki's father?: \n\n     1. Sasuke Uchiha\n     2. Minato Namikaze \n   3. Orochimaru\n\n   Your Answer: ",
+    "q4": "\nThe Village Hidden in the Leaves can be found in what country?: \n\n     1. The Land of Fire\n     2. The Land of Lightning\n     3. The Land of Earth\n\n    Your Answer: ",
+    "q5": "\nFILL IN THE BLANK.\nGaara is the _____ Kazakagae: \n\n     1. First\n     2. Fifth\n     3. Forth\n\n    Your Answer: ",
+    "q6": "\nHow many tails does the tailed beast (biju) Son Gokū have?: \n\n     1. Three (3)\n     2. Ten (10)\n     3. Four (4)\n\n Your Answer: ",
+    "q7": "\nWho was Tsunade's fiancée?: \n\n     1. Dan\n     2. Jiraiya\n     3. Minato\n\n   Your Answer: ",
+    "q8": "\nNagato is a member of which clan?: \n\n     1. Uzumaki\n     2. Hyuga\n     3. Akatsuki\n\n     Your Answer: ",
+    "q9": "\nWho was Naruto's teacher at the ninja academy?: \n\n     1. Iruka\n     2. Kakashi\n     3. Hiruzen \n\n Your Answer: ",
+    "q10": "\nWho was Naruto's first kiss with?: \n\n     1. Sakura\n     2. Hinata \n     3. Sasuke \n\n   Your Answer: ",
+    "q11": "\nWho is the child of Sasuke and Sakura?: \n\n     1. Hinata\n     2. Sarada\n     3. Salad \n\n   Your Answer: ",
+    "q12": "\nWho is the male parental figure for Himawari?: \n\n     1. Naruto\n     2. Boruto's Dad\n     3. Sasuke \n\n  Your Answer: ",
+}
+
+bonus_a1 = input(bonus_question['q1'])
+bonus_a2 = input(bonus_question['q2'])
+bonus_a3 = input(bonus_question['q3'])
+bonus_a4 = input(bonus_question['q4'])
+bonus_a5 = input(bonus_question['q5'])
+bonus_a6 = input(bonus_question['q6'])
+bonus_a7 = input(bonus_question['q7'])
+bonus_a8 = input(bonus_question['q8'])
+bonus_a9 = input(bonus_question['q8'])
+bonus_a10 = input(bonus_question['q10'])
+bonus_a11 = input(bonus_question['q11'])
+bonus_a12 = input(bonus_question['q12'])
+
+
+
 ##############  QUIZ DEFINITIONS  ##############
 
 def easy_bonus():
-    score = 0
-    time.sleep(1) #delay next function by (#) seconds
-    print("\nCONGRATULATIONS ON MAKING IT TO THE BONUS LEVEL!")
-    time.sleep(1)
-    print("\nThis next section will have three (3) multiple choice questions.")
-    time.sleep(1)
-    print("\nWhat is the name of Tsunade's summoning animal?: \n\n     (A) Manda\n     (B) Katsuyu\n     (C) Jiraya\n\n")
-    time.sleep(2)
-    answer = input("Your Answer?: ")
-    if answer == 'B' or answer == 'b':
-        print("CORRECT!!")
-        score = score + 1
-        time.sleep(1)
-        print("Bonus Score: ", score)
-    else:
-        print("Incorrect")
-        time.sleep(1)
-        print(r":'(")
-        time.sleep(1)
-        print("Bonus Score: ", score)
 
-    time.sleep(2)
-    print("\nWhat's the name of the Cursed Seal given to both Sasuke Uchiha and Anko Mitarashi?: \n\n     (A) Heaven Cursed Seal\n     (B) Mud Wall Seal\n     (C) Reaper's Death Seal\n\n")
-    time.sleep(2)
-    answer = input("Your Answer?: ")
-    if answer == 'A' or answer == 'a':
-        print("CORRECT!!")
-        score = score + 1
-        time.sleep(1)
-        print("Bonus Score: ", score)
-    else:
-        print("Incorrect")
-        time.sleep(1)
-        print(r":'(")
-        time.sleep(1)
-        print("Bonus Score: ", score)
-    
-    time.sleep(2)
-    print("\nWho was Naruto Uzumaki's father?: \n\n     (A) Sasuke Uchiha\n     (B) Minato Namikaze \n     (C) Orochimaru\n\n")
-    time.sleep(2)
-    answer = input("Your Answer?: ")
-    if answer == 'B' or answer == 'b':
-        print("CORRECT!!")
-        score = score + 1
-        time.sleep(1)
-        print("Bonus Score: ", score)
-        print("\nYou have completed the bonus level!\n")
-        print("You're Bonus Score is", score," You're AMAZING!!\n")
-        return restart_quiz()
-    else:
-        print("Incorrect")
-        time.sleep(1)
-        print(r":'(")
-        time.sleep(1)
-        print("Bonus Score: ", score)
-        print("\nYou have completed the bonus level!\n")
-        print("You're Bonus Score is", score," Fantastic!!\n")
-        return restart_quiz()
+    print("\nCONGRATULATIONS ON MAKING IT TO THE BONUS LEVEL! \nThis next section will have three (3) multiple choice questions.")
+
+    bonus_questions = [
+        [bonus_question['q1'], bonus_a1, '2'],
+        [bonus_question['q2'], bonus_a2, '1'],
+        [bonus_question['q3'], bonus_a3, '2'],
+    ]
+
+    score = 0
+    for bquestion, banswer, correct_answer in bonus_questions:
+        if banswer == correct_answer:
+            score = score + 1
+
+    print('Your score is: {} out of 3'.format(score))
 
 def med_bonus():
+
+    print("\nCONGRATULATIONS ON MAKING IT TO THE BONUS LEVEL! \nThis next section will have three (3) multiple choice questions.")
+
+    bonus_questions = [
+        [bonus_question['q4'], bonus_a4, '1'],
+        [bonus_question['q5'], bonus_a5, '2'],
+        [bonus_question['q6'], bonus_a6, '3'],
+    ]
+
     score = 0
-    time.sleep(1)
-    print("\nCONGRATULATIONS ON MAKING IT TO THE BONUS LEVEL!")
-    time.sleep(1)
-    print("\nThis next section will have three (3) multiple choice questions.")
-    time.sleep(1)
-    print("\nThe quiz will begin shortly.")
-    time.sleep(2)
-    print("\nThe Village Hidden in the Leaves can be found in what country?: \n\n     (A) The Land of Fire\n     (B) The Land of Lightning\n     (C) The Land of Earth\n\n")
-    time.sleep(2)
-    answer = input("Your Answer?: ")
-    if answer == 'A' or answer == 'a':
-        print("CORRECT!!")
-        score = score + 1
-        time.sleep(1)
-        print("Bonus Score: ", score)
-    else:
-        print("Incorrect")
-        time.sleep(1)
-        print(r":'(")
-        time.sleep(1)
-        print("Bonus Score: ", score)
+    for bquestion, banswer, correct_answer in bonus_questions:
+        if banswer == correct_answer:
+            score = score + 1
 
-    time.sleep(2)
-    print("\nFILL IN THE BLANK.\nGaara is the _____ Kazakagae: \n\n     (A) First\n     (B) Fifth\n     (C) Forth\n\n")
-    time.sleep(2)
-    answer = input("Your Answer?: ")
-    if answer == 'B' or answer == 'b':
-        print("CORRECT!!")
-        score = score + 1
-        time.sleep(1)
-        print("Bonus Score: ", score)
-    else:
-        print("Incorrect")
-        time.sleep(1)
-        print(r":'(")
-        time.sleep(1)
-        print("Bonus Score: ", score)
-
-    time.sleep(2)
-    print("\nHow many tails does the tailed beast (biju) Son Gokū have?: \n\n     (A) Three (3)\n     (B) Ten (10)\n     (C) Four (4)\n\n") 
-    time.sleep(2)
-    answer = input("Your Answer?: ")
-    if answer == 'C' or answer == 'c':
-        print("CORRECT!!")
-        score = score + 1
-        time.sleep(1)
-        print("Bonus Score: ", score)
-        print("\nYou have completed the bonus level!\n")
-        print("You're Bonus Score is", score," You're AMAZING!!\n")
-        return restart_quiz()
-    else:
-        print("Incorrect")
-        time.sleep(1)
-        print(r":'(")
-        time.sleep(1)
-        print("Bonus Score: ", score)
-        print("\nYou have completed the bonus level!\n")
-        print("You're Bonus Score is", score," Fantastic!!\n")
-        return restart_quiz()
+    print('Your score is: {} out of 3'.format(score))
 
 def hard_bonus():
+   
+    print("\nCONGRATULATIONS ON MAKING IT TO THE BONUS LEVEL! \nThis next section will have three (3) multiple choice questions.")
+
+    bonus_questions = [
+        [bonus_question['q7'], bonus_a7, '1'],
+        [bonus_question['q8'], bonus_a8, '1'],
+        [bonus_question['q9'], bonus_a9, '1'],
+    ]
+
     score = 0
-    time.sleep(1)
-    print("\nCONGRATULATIONS ON MAKING IT TO THE BONUS LEVEL!")
-    time.sleep(1)
-    print("\nThis next section will have three (3) multiple choice questions.")
-    time.sleep(1)
-    print("\nWho was Tsunade's fiancée?: \n\n     (A) Dan\n     (B) Jiraiya\n     (C) Minato\n\n")
-    time.sleep(2)
-    answer = input("Your Answer?: ")
-    if answer == 'A' or answer == 'a':
-        print("CORRECT!!")
-        score = score + 1
-        time.sleep(1)
-        print("Bonus Score: ", score)
-    else:
-        print("Incorrect")
-        time.sleep(1)
-        print(r":'(")
-        time.sleep(1)
-        print("Bonus Score: ", score)
-
-    time.sleep(2)
-    print("\nNagato is a member of which clan?: \n\n     (A) Uzumaki\n     (B) Hyuga\n     (C) Akatsuki\n\n")
-    time.sleep(2)
-    answer = input("Your Answer?: ")
-    if answer == 'A' or answer == 'a':
-        print("CORRECT!!")
-        score = score + 1
-        time.sleep(1)
-        print("Bonus Score: ", score)
-    else:
-        print("Incorrect")
-        time.sleep(1)
-        print(r":'(")
-        time.sleep(1)
-        print("Bonus Score: ", score)
-
-    time.sleep(2)
-    print("\nWho was Naruto's teacher at the ninja academy?: \n\n     (A) Iruka\n     (B) Kakashi\n     (C) Hiruzen \n\n")
-    time.sleep(2)
-    answer = input("Your Answer?: ")
-    if answer == 'A' or answer == 'a':
-        print("CORRECT!!")
-        score = score + 1
-        time.sleep(1)
-        print("Bonus Score: ", score)
-        print("\nYou have completed the bonus level!\n")
-        print("You're Bonus Score is", score," You're AMAZING!!\n")
-        return restart_quiz()
-    else:
-        print("Incorrect")
-        time.sleep(1)
-        print(r":'(")
-        time.sleep(1)
-        print("Bonus Score: ", score)
-        print("\nYou have completed the bonus level!\n")
-        print("You're Bonus Score is", score," Fantastic!!\n")
-        return restart_quiz()
+    for bquestion, banswer, correct_answer in bonus_questions:
+        if banswer == correct_answer:
+            score = score + 1
 
 def ultimate_bonus():
+
+    print("\nCONGRATULATIONS ON MAKING IT TO THE BONUS LEVEL!\n\n  M  E  M  E     E  X  T  R  E  M  E  ! \n\nThis next section will have three (3) multiple choice questions.")
+
+    bonus_questions = [
+        [bonus_question['q10'], bonus_a10, '3'],
+        [bonus_question['q11'], bonus_a11, '3'],
+        [bonus_question['q12'], bonus_a12, '2'],
+    ]
+
     score = 0
-    time.sleep(1)
-    print("\nCONGRATULATIONS ON MAKING IT TO THE BONUS LEVEL!\n\n  M  E  M  E     E  X  T  R  E  M  E  !")
-    time.sleep(1)
-    print("\nThis next section will have three (3) multiple choice questions.")
-    time.sleep(1)
-    print("\nWho was Naruto's first kiss with?: \n\n     (A) Sakura\n     (B) Hinata \n     (C) Sasuke \n\n")
-    time.sleep(2)
-    answer = input("Your Answer?: ")
-    if answer == 'C' or answer == 'c':
-        print("CORRECT!!")
-        score = score + 1
-        time.sleep(1)
-        print("Bonus Score: ", score)
-    else:
-        print("Incorrect")
-        time.sleep(1)
-        print(r":'(")
-        time.sleep(1)
-        print("Bonus Score: ", score)
-
-    time.sleep(2)
-    print("\nWho is the child of Sasuke and Sakura?: \n\n     (A) Hinata\n     (B) Sarada\n     (C) Salad \n\n")
-    time.sleep(2)
-    answer = input("Your Answer?: ")
-    if answer == 'C' or answer == 'c':
-        print("CORRECT!!")
-        score = score + 1
-        time.sleep(1)
-        print("Bonus Score: ", score)
-    else:
-        print("Incorrect")
-        time.sleep(1)
-        print(r":'(")
-        time.sleep(1)
-        print("Bonus Score: ", score)
-
-    time.sleep(2)
-    print("\nWho is the male parental figure for Himawari?: \n\n     (A) Naruto\n     (B) Boruto's Dad\n     (C) Sasuke \n\n")
-    time.sleep(2)
-    answer = input("Your Answer?: ")
-    if answer == 'B' or answer == 'b':
-        print("CORRECT!!")
-        score = score + 1
-        time.sleep(1)
-        print("Bonus Score: ", score)
-        print("\nYou have completed the bonus level!\n")
-        print("You're Bonus Score is", score," You're AMAZING!!\n")
-        return restart_quiz()
-    else:
-        print("Incorrect")
-        time.sleep(1)
-        print(r":'(")
-        time.sleep(1)
-        print("Bonus Score: ", score)
-        print("\nYou have completed the bonus level!\n")
-        print("You're Bonus Score is", score," Fantastic!!\n")
-        return restart_quiz()
+    for bquestion, banswer, correct_answer in bonus_questions:
+        if banswer == correct_answer:
+            score = score + 1
 
 def welcome(): 
     '''Get players name'''
     print("\n" + "* " * 10)
-    time.sleep(1)
     print("\nWELCOME TO THE QUIZ TO END ALL QUIZES!\n")
-    time.sleep(1)
     print("* " * 10)
-    time.sleep(1)
     print("\n"r"\/\/\/\/\/\/\/\/\/**NARUTO: Still a Genin?! ¯\_(ツ)_/¯ **/\/\/\/\/\/\/\/\/")
-    time.sleep(1)
     player_name = input("\nPlease tell me your name: ")
-    time.sleep(1)
     print("\nHello " + player_name)
-    time.sleep(1)
     print("\nLET'S GET STARTED!!")
-    time.sleep(1)
 
 def level_choice(level): 
     '''Player chooses level. Executed quiz and answers
     Inputs: Current level.  
 	Outputs: The specific quiz and its answers associated with that level.'''
-    if level == "easy" or level == "Easy" or level == "EASY" or level == "ez" or level == "EZ" or level == "E" or level == "e":
+    if level.lower() in ['easy', 'ez', 'e']:
         return easy_quiz, easy_answers
-    elif level == "intermediate" or level == "Intermediate" or level == "INTERMEDIATE" or level == "I" or level == "i" or level == "medium" or level == "Medium" or level == "MEDIUM" or level == "med" or level == "Med" or level == "MED" or level == "M" or level == "m":
+    elif level.lower() in ['intermediate', 'i', 'med', 'medium', 'm']:
         return intermediate_quiz, intermediate_answers
-    elif level == "HARD" or level == "hard" or level == "Hard" or level == "H" or level == "h":
+    elif level.lower() in ['hard', 'h']:
         return hard_quiz, hard_answers
-    elif level == "ultimate" or level == "Ultimate" or level == "ULTIMATE" or level == "U" or level == "u":
+    elif level.lower() in ['ultimate', 'u']:
         return ultimate_quiz, ultimate_answers
 
 def advise_guesses():
@@ -295,31 +138,12 @@ def advise_guesses():
     global guesses
     global min_guess
     min_guess = 1
-    global max_guess
     max_guess = 5
-    try:
-        guesses  = int(input("\nHow many guesses would you like (up to 5)?: "))
-        while int(guesses) < min_guess or int(guesses) > max_guess:
-            time.sleep(1)
-            guesses = input("Please enter a number that is greater than 0, but less than or equal to 5:  ")
-    except:
-        time.sleep(1)
-        print("\nInvalid entry.\n")
-        time.sleep(1)
-        try:
-            guesses  = int(input("\nHow many guesses would you like (up to 5)?: "))
-            while int(guesses) < min_guess or int(guesses) > max_guess:
-                time.sleep(1)
-                guesses = input("Please enter a number that is greater than 0, but less than or equal to 5:  ")
-        except:
-            time.sleep(1)
-            print("\nInvalid entry.\n")
-            time.sleep(1)
-            print("\nGame will reset.\n")
-            time.sleep(2)
-            return start_game()
+    guesses = input("How many guesses would you like (up to 5)?: ")
+    while not guesses.isdigit() or int(guesses) < min_guess or int(guesses) > max_guess:
+        guesses = input("Please enter a number that is greater than 0, but less than or equal to 5:  ")
     guesses = int(guesses)
-    time.sleep(1)
+    
     print("\n    ", guesses, "guess(es) it is!!")
 
 def all_blanks(word, blanks): 
@@ -397,51 +221,40 @@ def answer_question(level, quiz, answers):
             print("\nIncorrect. Please try again.\n")
             if guesses > min_guess:
                 guesses += minus_one
-                time.sleep(1)
                 print(guesses, "guess(es) remaining")
-                time.sleep(1)
                 player_answer = input("\nWhat is your answer for " + blank + "?: ")
                 player_answer = player_answer.lower()
             else:
                 print("\n" + "* " * 10)
-                time.sleep(1)
                 print("\nGAME OVER\n")
-                time.sleep(1)
                 print("* " * 10)
-                time.sleep(1)
                 print("\nYOU LOSE\n")
-                time.sleep(1)
                 print("* " * 10)
-                time.sleep(1)
                 print("\n")
                 return restart_quiz()
 
-        time.sleep(1)
-        print("\nCORRECT!!\n")
-        time.sleep(1)
-									
+        print("\nCORRECT!!\n")        							
         replaced = retrieve_answers(quiz, blanks, replaced, player_answer, index)
         print(replaced)			
 
-        index += 1
+        index += min_guess
 
     return replaced, index
 
 def bonus_level():
-    '''Program checks player original selected level, returns appropriate bonus level/answers
-    Inputs:  level selected by the user.  
-	Outputs: The specific bonus quiz.'''
-    if level == "easy" or level == "Easy" or level == "EASY" or level == "ez" or level == "EZ":
+    '''Program checks player original selected level, returns appropriate bonus level/answers'''
+    if level.lower() in ['easy', 'ez', 'e']:
         return easy_bonus()
-    elif level == "intermediate" or level == "Intermediate" or level == "INTERMEDIATE" or level == "I" or level == "i" or level == "medium" or level == "Medium" or level == "MEDIUM" or level == "med" or level == "Med" or level == "MED" or level == "M" or level == "m":
+    elif level.lower() in ['intermediate', 'i', 'med', 'medium', 'm']:
         return med_bonus()
-    elif level == "HARD" or level == "hard" or level == "Hard" or level == "H" or level == "h":
+    elif level.lower() in ['hard', 'h']:
         return hard_bonus()
-    elif level == "ultimate" or level == "Ultimate" or level == "ULTIMATE" or level == "U" or level == "u":
+    elif level.lower() in ['ultimate', 'u']:
         return ultimate_bonus()
 
 def winner_winner(): 
     '''Allows player to choose play a bonus level, quit the game, or restart the quiz.'''
+
     print("\nWinner Winner Chicken Dinner" "\nCongratulations you won the game!")
     blevel = input("\nWould you like to play a bonus level?: ")
     if blevel in yesList:  
@@ -456,7 +269,13 @@ def winner_winner():
         elif blevel in noList:
             return restart_quiz()
         else:
-            game_over()
+            print("\n" + "* " * 10)
+            print("\nGAME OVER\n")
+            print("* " * 10)
+            print("\nTHANK YOU FOR STOPPING BY!\n")
+            print("* " * 10)
+            print("\n")
+            quit()
 
 def restart_quiz():
     '''Allow the player to start the game from the beginning. Choose a new level. Outputs: Entire game.'''
@@ -467,11 +286,9 @@ def restart_quiz():
     elif restart in noList:
         return game_over()
     else:
-        time.sleep(1)
         print("\nI'm sorry, I do not understand your choice.\n")
-        time.sleep(1)
         restart = ("\nWould you like to start again?\nYes or No?: ")
-        time.sleep(1)
+        
         if restart in yesList:
             start_game()
         else:
@@ -479,17 +296,11 @@ def restart_quiz():
 
 def game_over():
     print("\n" + "* " * 10)
-    time.sleep(1)
     print("\nGAME OVER\n")
-    time.sleep(1)
     print("* " * 10)
-    time.sleep(1)
     print("\nTHANK YOU FOR STOPPING BY!\n")
-    time.sleep(1)
     print("* " * 10)
-    time.sleep(1)
     print("\n")
-    time.sleep(5)
     quit()
 
 ##############  Starting to actually play the 'game'  ##############
@@ -500,7 +311,7 @@ def start_game():
     welcome()
     advise_guesses()
     global level
-    time.sleep(1)
+    
     level = input("\n""\nPlease choose your difficulty level - Easy, Medium, Hard, Ultimate: ") 
     print("")
 
@@ -509,20 +320,16 @@ def start_game():
         print(quiz)
         replaced = answer_question(level, quiz, answers)
     else:
-        time.sleep(1)
         print("\nI'm sorry, I do not understand your choice.")
-        time.sleep(1)
         level = input("Please choose from the following - Easy, Medium, Hard, Ultimate: ")
         if level in levelList:
             quiz, answers = level_choice(level)
             print(quiz)
             replaced = answer_question(level, quiz, answers)
         else: 
-            time.sleep(1)
             print("\nI'm sorry, I do not understand your choice.")
-            time.sleep(1)
             print("\nThe game will now restart.")
-            time.sleep(1)
+            
             start_game()
 
     return winner_winner()
