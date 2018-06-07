@@ -4,10 +4,10 @@ yesList = ["yes", "y", "yeah", "yah", "ye", "YES", "Y","YEAH","YAH", "YE", "Yes"
 noList = ["no", "n", "nah", "meh", "NO", "N", "NAH", "MEH", "No", "Nah", "Meh"]
 blanks = ["___1___", "___2___", "___3___", "___4___", "___5___"]    
 
-easy_quiz = """Naruto graduates the Ninja ___1___ and joins Team ___2___, along side his rival ___3___, his crush ___4___ and his sensei ___5___. Source: Naruto.Wikia"""
-intermediate_quiz = """The ___1___ begin kidnapping the ___2___ to extract their ___3___ and revive the ___4___. With the ___4___ restored, the Akatsuki can cast the ___5___ Tsukuyomi. Source: Naruto.Wikia"""
-hard_quiz = """Naruto is incapable of performing the basic ___1___ Technique. This leaves him unable to graduate from the Academy, one of his instructors, ___2___, tells Naruto that if he could steal the Scroll of ___3___ and learn one of its secret techniques, Naruto will graduate. After successfully stealing the scroll, ___4___ is caught by another instructor, ___5___. Source: Naruto.Wikia"""
-ultimate_quiz = """The Hyuga is one of the ___1___ noble clans of Konohagakure. All members born into this clan possess the ___2___, a ___3___ that gives them extended fields of vision and the ability to see through solid objects and even the ___4___ circulatory system, amongst other things. Members of this clan also possess the unique ability to expel ___4___ from any of the ___5___ in their body. Source: Naruto.Wikia"""
+easy_quiz = """\n\nNaruto graduates the Ninja ___1___ and joins Team ___2___, along side his rival ___3___, his crush ___4___ and his sensei ___5___. Source: Naruto.Wikia"""
+intermediate_quiz = """\n\nThe ___1___ begin kidnapping the ___2___ to extract their ___3___ and revive the ___4___. With the ___4___ restored, the Akatsuki can cast the ___5___ Tsukuyomi. Source: Naruto.Wikia"""
+hard_quiz = """\n\nNaruto is incapable of performing the basic ___1___ Technique. This leaves him unable to graduate from the Academy, one of his instructors, ___2___, tells Naruto that if he could steal the Scroll of ___3___ and learn one of its secret techniques, Naruto will graduate. After successfully stealing the scroll, ___4___ is caught by another instructor, ___5___. Source: Naruto.Wikia"""
+ultimate_quiz = """\n\nThe Hyuga is one of the ___1___ noble clans of Konohagakure. All members born into this clan possess the ___2___, a ___3___ that gives them extended fields of vision and the ability to see through solid objects and even the ___4___ circulatory system, amongst other things. Members of this clan also possess the unique ability to expel ___4___ from any of the ___5___ in their body. Source: Naruto.Wikia"""
 
 easy_answers = ["academy", "seven", "sasuke", "sakura", "kakashi"]
 intermediate_answers = ["akatsuki", "jinchuriki", "tailed beast", "ten tails", "infinite"]
@@ -17,88 +17,88 @@ ultimate_answers = ["four", "byakugan", "kekkei genkai", "chakra", "tenketsu"]
 ##############  QUIZ DEFINITIONS  ##############
 
 def easy_bonus():
-    '''If player chooses to play a bonus level program checks current level and returns the appropriate corresponding level.
+    '''If player chooses to play a bonus level system checks current level and returns the appropriate corresponding level.
     Inputs: Current Level
     Outputs: Bonus questions + Score
     '''
     print("\nCONGRATULATIONS ON MAKING IT TO THE BONUS LEVEL! \nThis next section will have three (3) multiple choice questions.")
 
-    bonus_a1 = input("What is the name of Tsunade's summoning animal?: \n\n     1. Manda\n     2. Katsuyu\n     3. Jiraya\n\n Your Answer: ")
-    bonus_a2 = input("\nWhat's the name of the Cursed Seal given to both Sasuke Uchiha and Anko Mitarashi?: \n\n     1. Heaven Cursed Seal\n     2. Mud Wall Seal\n     3. Reaper's Death Seal\n\n Your Answer: ")
-    bonus_a3 = input("\nWho was Naruto Uzumaki's father?: \n\n     1. Sasuke Uchiha\n     2. Minato Namikaze \n   3. Orochimaru\n\n   Your Answer: ")
+    bonus_answer1 = input("What is the name of Tsunade's summoning animal?: \n\n     1. Manda\n     2. Katsuyu\n     3. Jiraya\n\nYour Answer: ")
+    bonus_answer2 = input("\nWhat's the name of the Cursed Seal given to both Sasuke Uchiha and Anko Mitarashi?: \n\n     1. Heaven Cursed Seal\n     2. Mud Wall Seal\n     3. Reaper's Death Seal\n\nYour Answer: ")
+    bonus_answer3 = input("\nWho was Naruto Uzumaki's father?: \n\n     1. Sasuke Uchiha\n     2. Minato Namikaze \n     3. Orochimaru\n\nYour Answer: ")
 
     score = 0
-    if bonus_a1 == '2':
+    if bonus_answer1 == '2':
         score = score + 1
-    if bonus_a2 == '1':
+    if bonus_answer2 == '1':
         score = score + 1
-    if bonus_a3 == '2':
+    if bonus_answer3 == '2':
         score = score + 1    
 
-    print('Your score is: {} out of 3'.format(score))
+    print('\n\nYour score is: {} out of 3'.format(score))
     return restart_quiz()
 
 def med_bonus():
-    '''If player chooses to play a bonus level program checks current level and returns the appropriate corresponding level.
+    '''If player chooses to play a bonus level system checks current level and returns the appropriate corresponding level.
     Inputs: Current Level
     Outputs: Bonus questions + Score
     '''
     print("\nCONGRATULATIONS ON MAKING IT TO THE BONUS LEVEL! \nThis next section will have three (3) multiple choice questions.")
 
-    bonus_a4 = input("\nThe Village Hidden in the Leaves can be found in what country?: \n\n     1. The Land of Fire\n     2. The Land of Lightning\n     3. The Land of Earth\n\n    Your Answer: ")
-    bonus_a5 = input("\nFILL IN THE BLANK.\nGaara is the _____ Kazakagae: \n\n     1. First\n     2. Fifth\n     3. Forth\n\n    Your Answer: ")
-    bonus_a6 = input("\nHow many tails does the tailed beast (biju) Son Gokū have?: \n\n     1. Three (3)\n     2. Ten (10)\n     3. Four (4)\n\n Your Answer: ")
+    bonus_answer4 = input("\nThe Village Hidden in the Leaves can be found in what country?: \n\n     1. The Land of Fire\n     2. The Land of Lightning\n     3. The Land of Earth\n\nYour Answer: ")
+    bonus_answer5 = input("\nFILL IN THE BLANK.\nGaara is the _____ Kazakagae: \n\n     1. First\n     2. Fifth\n     3. Forth\n\nYour Answer: ")
+    bonus_answer6 = input("\nHow many tails does the tailed beast (biju) Son Gokū have?: \n\n     1. Three (3)\n     2. Ten (10)\n     3. Four (4)\n\nYour Answer: ")
 
     score = 0
-    if bonus_a4 == '1':
+    if bonus_answer4 == '1':
         score = score + 1
-    if bonus_a5 == '2':
+    if bonus_answer5 == '2':
         score = score + 1
-    if bonus_a6 == '3':
+    if bonus_answer6 == '3':
         score = score + 1    
 
     print('Your score is: {} out of 3'.format(score))
     return restart_quiz()
 
 def hard_bonus():
-    '''If player chooses to play a bonus level program checks current level and returns the appropriate corresponding level.
+    '''If player chooses to play a bonus level system checks current level and returns the appropriate corresponding level.
     Inputs: Current Level
     Outputs: Bonus questions + Score
     '''
     print("\nCONGRATULATIONS ON MAKING IT TO THE BONUS LEVEL! \nThis next section will have three (3) multiple choice questions.")    
 
-    bonus_a7 = input("\nWho was Tsunade's fiancée?: \n\n     1. Dan\n     2. Jiraiya\n     3. Minato\n\n   Your Answer: ")
-    bonus_a8 = input("\nNagato is a member of which clan?: \n\n     1. Uzumaki\n     2. Hyuga\n     3. Akatsuki\n\n     Your Answer: ")
-    bonus_a9 = input("\nWho was Naruto's teacher at the ninja academy?: \n\n     1. Iruka\n     2. Kakashi\n     3. Hiruzen \n\n Your Answer: ")
+    bonus_answer7 = input("\nWho was Tsunade's fiancée?: \n\n     1. Dan\n     2. Jiraiya\n     3. Minato\n\n   Your Answer: ")
+    bonus_answer8 = input("\nNagato is a member of which clan?: \n\n     1. Uzumaki\n     2. Hyuga\n     3. Akatsuki\n\n     Your Answer: ")
+    bonus_answer9 = input("\nWho was Naruto's teacher at the ninja academy?: \n\n     1. Iruka\n     2. Kakashi\n     3. Hiruzen \n\n Your Answer: ")
 
     score = 0
-    if bonus_a7 == '1':
+    if bonus_answer7 == '1':
         score = score + 1
-    if bonus_a8 == '1':
+    if bonus_answer8 == '1':
         score = score + 1
-    if bonus_a9 == '1':
+    if bonus_answer9 == '1':
         score = score + 1    
 
     print('Your score is: {} out of 3'.format(score) + 'Great Work!')
     return restart_quiz()
 
 def ultimate_bonus():
-    '''If player chooses to play a bonus level program checks current level and returns the appropriate corresponding level.
+    '''If player chooses to play a bonus level system checks current level and returns the appropriate corresponding level.
     Inputs: Current Level
     Outputs: Bonus questions + Score
     '''
     print("\nCONGRATULATIONS ON MAKING IT TO THE BONUS LEVEL!\n\n  M    E    M    E        E    X    T    R    E    M    E    ! \n\nThis next section will have three (3) multiple choice questions.")
 
-    bonus_a10 = input("\nWho was Naruto's first kiss with?: \n\n     1. Sakura\n     2. Hinata \n     3. Sasuke \n\n   Your Answer: ")
-    bonus_a11 = input("\nWho is the child of Sasuke and Sakura?: \n\n     1. Hinata\n     2. Sarada\n     3. Salad \n\n   Your Answer: ")
-    bonus_a12 = input("\nWho is the male parental figure for Himawari?: \n\n     1. Naruto\n     2. Boruto's Dad\n     3. Sasuke \n\n  Your Answer: ")
+    bonus_answer10 = input("\nWho was Naruto's first kiss with?: \n\n     1. Sakura\n     2. Hinata \n     3. Sasuke \n\nYour Answer: ")
+    bonus_answer11 = input("\nWho is the child of Sasuke and Sakura?: \n\n     1. Hinata\n     2. Sarada\n     3. Salad \n\nYour Answer: ")
+    bonus_answer12 = input("\nWho is the male parental figure for Himawari?: \n\n     1. Naruto\n     2. Boruto's Dad\n     3. Sasuke \n\nYour Answer: ")
 
     score = 0
-    if bonus_a10 == '3':
+    if bonus_answer10 == '3':
         score = score + 1
-    if bonus_a11 == '3':
+    if bonus_answer11 == '3':
         score = score + 1
-    if bonus_a12 == '2':
+    if bonus_answer12 == '2':
         score = score + 1    
 
     print('Your score is: {} out of 3'.format(score) + 'Great Work!')
@@ -126,6 +126,18 @@ def level_choice(level):
         return hard_quiz, hard_answers
     elif level.lower() in ['ultimate', 'u']:
         return ultimate_quiz, ultimate_answers
+
+def set_difficulty():
+    global level
+    level = input("\n""\nPlease choose your difficulty level - Easy, Medium, Hard, Ultimate: ") 
+    print("")
+
+    while level not in levelList:
+        level = input("\nI'm sorry, I do not understand your choice. \n\nPlease choose from the following - Easy, Medium, Hard, Ultimate: ")
+    else:
+        quiz, answers = level_choice(level)
+        print(quiz)
+        replaced = answer_question(level, quiz, answers)
 
 def advise_guesses():
     '''Player can determine how many guesses they would like. Allows to choose between 1 and 5 guesses'''
@@ -201,38 +213,27 @@ def answer_question(level, quiz, answers):
 
     replaced = []
     player_answer = ""
-
     index = 0
     for blank in blanks:
         global guesses
         minus_one = -1
         question = "\nFor " + blank + " "
         print(question)
-        player_answer = input("What is your answer?: ")
+        player_answer = input("What is your answer for " + blank + "?: ")
         player_answer = player_answer.lower()
-
         while player_answer != answers[index]:
-            print("\nIncorrect. Please try again.\n")
             if guesses > min_guess:
                 guesses += minus_one
-                print(guesses, "guess(es) remaining")
+                print("\nIncorrect. Please try again.\n", + guesses, "guess(es) remaining")
                 player_answer = input("\nWhat is your answer for " + blank + "?: ")
                 player_answer = player_answer.lower()
             else:
-                print("\n" + "* " * 10)
-                print("\nGAME OVER\n")
-                print("* " * 10)
-                print("\nYOU LOSE\n")
-                print("* " * 10)
-                print("\n")
+                print("\nNO MORE GUESSES!\n\nGAME OVER\n\nTHANK YOU FOR STOPPING BY!\n")
                 return restart_quiz()
-
         print("\nCORRECT!!\n")        							
         replaced = retrieve_answers(quiz, blanks, replaced, player_answer, index)
         print(replaced)			
-
         index += min_guess
-
     return replaced, index
 
 def bonus_level():
@@ -249,27 +250,19 @@ def bonus_level():
 def winner_winner(): 
     '''Allows player to choose play a bonus level, quit the game, or restart the quiz.'''
 
-    print("\nWinner Winner Chicken Dinner" "\nCongratulations you won the game!")
-    blevel = input("\nWould you like to play a bonus level?: ")
+    blevel = input("\nWinner Winner Chicken Dinner" "\nCongratulations you won the game!\n\nWould you like to play a bonus level?: ")
     if blevel in yesList:  
             return bonus_level()
     elif blevel in noList:
             return restart_quiz()
     else:
-        print("I'm sorry, I do not understand your choice.")
-        blevel = input("\nWould you like to play a bonus level?" "\n Yes or No?: ")
+        blevel = input("I'm sorry, I do not understand your choice.\n\nWould you like to play a bonus level?" "\n Yes or No?: ")
         if blevel in yesList:  
             return bonus_level()
         elif blevel in noList:
             return restart_quiz()
         else:
-            print("\n" + "* " * 10)
-            print("\nGAME OVER\n")
-            print("* " * 10)
-            print("\nTHANK YOU FOR STOPPING BY!\n")
-            print("* " * 10)
-            print("\n")
-            quit()
+            return game_over()
 
 def restart_quiz():
     '''Allow the player to start the game from the beginning. Choose a new level. Outputs: Entire game.'''
@@ -278,23 +271,19 @@ def restart_quiz():
     if restart in yesList:
         start_game()
     elif restart in noList:
-        return game_over()
+        print("Thank you for participating in my quiz!\n\nCome back soon!\n\nGAME OVER!\n\n")
+        quit()
     else:
-        print("\nI'm sorry, I do not understand your choice.\n")
-        restart = ("\nWould you like to start again?\nYes or No?: ")
-        
+        print("\nI'm sorry, I do not understand your choice.\n\nWould you like to start again?\n")
+        restart = input("\nYes or No?: ")
         if restart in yesList:
             start_game()
         else:
-            game_over()
+            print("\nGAME OVER\n\nThank you for participating\n\n")
+            quit()
 
 def game_over():
-    print("\n" + "* " * 10)
-    print("\nGAME OVER\n")
-    print("* " * 10)
-    print("\nTHANK YOU FOR STOPPING BY!\n")
-    print("* " * 10)
-    print("\n")
+    print("\nGAME OVER\n\nTHANK YOU FOR STOPPING BY!\n\n")
     quit()
 
 ##############  Starting to actually play the 'game'  ##############
@@ -304,27 +293,7 @@ def start_game():
 
     welcome()
     advise_guesses()
-    global level
-    
-    level = input("\n""\nPlease choose your difficulty level - Easy, Medium, Hard, Ultimate: ") 
-    print("")
-
-    if level in levelList:
-        quiz, answers = level_choice(level)
-        print(quiz)
-        replaced = answer_question(level, quiz, answers)
-    else:
-        print("\nI'm sorry, I do not understand your choice.")
-        level = input("Please choose from the following - Easy, Medium, Hard, Ultimate: ")
-        if level in levelList:
-            quiz, answers = level_choice(level)
-            print(quiz)
-            replaced = answer_question(level, quiz, answers)
-        else: 
-            print("\nI'm sorry, I do not understand your choice.")
-            print("\nThe game will now restart.")
-            
-            start_game()
+    set_difficulty()
 
     return winner_winner()
 
